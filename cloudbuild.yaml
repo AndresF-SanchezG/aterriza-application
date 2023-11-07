@@ -1,5 +1,5 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/aterriza-application/aterriza:v3:$COMMIT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/aterriza-application/aterriza:v3:$COMMIT_SHA']
+    args: ['push', 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA']
