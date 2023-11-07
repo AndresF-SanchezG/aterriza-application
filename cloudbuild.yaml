@@ -12,7 +12,7 @@ steps:
       - 'gcr.io/aterriza-application/aterriza:v4'
 
 options:
-  logging:
+  build:
     # Aquí especifica el depósito de logs
     logsBucket: 'gs://aterriza-bucket'
 
