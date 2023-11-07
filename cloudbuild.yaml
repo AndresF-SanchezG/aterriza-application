@@ -1,18 +1,15 @@
-options:
-  build:
-    logs_bucket: 'gs://aterriza-bucket'
-
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
       - '-t'
-      - 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA'
+      - 'gcr.io/aterriza-application/aterriza:v4'
       - '.'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA'
+      - 'gcr.io/aterriza-application/aterriza:v4'
+
 
 
