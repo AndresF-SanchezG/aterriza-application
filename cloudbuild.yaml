@@ -1,11 +1,18 @@
+options:
+  build:
+    logs_bucket: 'gs://aterriza-bucket'
+
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA', '.']
-    env:
-      - 'COMMIT_SHA=$COMMIT_SHA'  # Agrega esta línea para definir la variable
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA'
+      - '.'
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA']
-    env:
-      - 'COMMIT_SHA=$COMMIT_SHA'  # Asegúrate de definir la variable nuevamente aquí
+    args:
+      - 'push'
+      - 'gcr.io/aterriza-application/aterriza:v4:$COMMIT_SHA'
+
 
