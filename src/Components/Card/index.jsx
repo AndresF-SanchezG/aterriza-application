@@ -9,6 +9,7 @@ const Card = () => {
                 <img className='w-full h-full object-cover rounded-lg w-52 h-52' src='https://images.pexels.com/photos/3678857/pexels-photo-3678857.jpeg?auto=compress&cs=tinysrgb&w=600' alt='hotelGeneric'/>
                 <div className='absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1'>+</div>
             </figure>
+            
 
             </NavLink>
 
