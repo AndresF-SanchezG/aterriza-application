@@ -11,5 +11,11 @@ steps:
       - 'push'
       - 'gcr.io/aterriza-application/aterriza:v4'
 
+options:
+  logging:
+    # Aquí especifica el depósito de logs
+    logsBucket: 'gs://aterriza-bucket'
+
+
 
 
