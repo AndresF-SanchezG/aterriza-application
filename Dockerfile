@@ -2,7 +2,7 @@
 FROM node:14
 
 
-WORKDIR /api
+WORKDIR /aterriza-application
 
 
 COPY package*.json ./
