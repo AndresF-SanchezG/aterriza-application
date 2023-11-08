@@ -10,22 +10,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Google Cloud CLI
-        uses: google-github-actions/setup-gcloud@v0.3.0
+        uses: google-github-actions/setup-gcloud@v0
         with:
           version: 'latest'
+          service_account_key: ${{ secrets.GCLOUD_AUTH_KEY }}
 
-      - name: Build Docker image
+      - name: Build Docker Image
         run: |
-          export COMMIT_SHA=$(git rev-parse HEAD)
-          docker build -t aterriza:v4 .
-          docker tag aterriza:v4 gcr.io/aterriza-application/aterriza:v4
+          docker build -t gcr.io/aterriza-application/aterriza:v4 .
+        env:
+          PROJECT_ID: aterriza-application
+          IMAGE_NAME: aterriza
+          TAG: v4
 
       - name: Authenticate with Google Cloud
+        run: echo '${{ secrets.GCLOUD_AUTH_KEY }}' > keyfile.json && gcloud auth activate-service-account --key-file=keyfile.json && rm keyfile.json
+
+      - name: Configure Docker for Google Cloud
         run: gcloud auth configure-docker
 
-      - name: Push Docker image to Google Container Registry
+      - name: Push Docker Image to Container Registry
         run: docker push gcr.io/aterriza-application/aterriza:v4
+
+      - name: Set up gsutil
+        run: gcloud components install gsutil
+
+      - name: Copy build logs to Google Cloud Storage
+        run: |
+          gsutil cp -r . gs://aterriza-bucket
+
+
