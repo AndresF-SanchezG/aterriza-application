@@ -31,7 +31,7 @@ jobs:
         run: docker push gcr.io/aterriza-application/aterriza:v4
 
       - name: Autenticar con Google Cloud
-        run: echo "$CLAVE_AUTENTICACION_GCLOUD" | base64 --decode > /tmp/gcloud.json && gcloud auth activate-service-account --key-file=/tmp/gcloud.json
+        run: echo "$GCLOUD_AUTH_KEY" | base64 --decode > /tmp/gcloud.json && gcloud auth activate-service-account --key-file=/tmp/gcloud.json
 
       - name: Subir imagen de Docker al Registro de Contenedores de Google
         run: docker push gcr.io/aterriza-application/aterriza:v4
