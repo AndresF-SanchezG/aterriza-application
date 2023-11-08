@@ -21,7 +21,8 @@ jobs:
       - name: Build Docker image
         run: |
           export COMMIT_SHA=$(git rev-parse HEAD)
-          docker build . -t gcr.io/aterriza-application/aterriza:v4
+          docker build -t aterriza:v4 .
+          docker tag aterriza:v4 gcr.io/aterriza-application/aterriza:v4
 
       - name: Authenticate with Google Cloud
         run: gcloud auth configure-docker
