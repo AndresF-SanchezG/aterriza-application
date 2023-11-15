@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /aterriza-application/api
+WORKDIR /aterriza-application
 
 
 COPY package*.json ./
@@ -16,4 +16,4 @@ RUN npm install -g serve
 
 EXPOSE 3000
 
-CMD ["serve", "-s", "dist", "-l", "5000"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
