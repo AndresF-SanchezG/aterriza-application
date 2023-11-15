@@ -24,7 +24,9 @@ const Formulario = () => {
       <form>
         <ul className="py-4 space-y-4 md:flex gap-2 md:space-y-0 md:flex-wrap ">
           <li className="mb-4">
+            <label htmlFor="ciudad" className="text-purple-800 text-sm mb-1 block">Ciudad:</label>
             <select
+              id="ciudad"
               className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setCiudadSeleccionada(e.target.value)}
               value={ciudadSeleccionada}
@@ -39,7 +41,9 @@ const Formulario = () => {
             </select>
           </li>
           <li className="mb-4">
+            <label htmlFor="hotel" className="text-purple-800 text-sm mb-1 block">Selecciona tu Hotel:</label>
             <select
+              id="hotel"
               className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setHotelSeleccionado(e.target.value)}
               value={hotelSeleccionado}
@@ -54,8 +58,10 @@ const Formulario = () => {
             </select>
           </li>
           <li className="mb-4">
+            <label htmlFor="fechaEntrada" className="text-purple-800 text-sm mb-1 block">Fecha de entrada:</label>
             <input
               type="date"
+              id="fechaEntrada"
               className="w-full p-2 border border-purple-800 rounded-md border-2"
               placeholder={tipoDatosCotizacion[2]}
               onChange={(e) => setFechaEntrada(e.target.value)}
@@ -64,8 +70,10 @@ const Formulario = () => {
             />
           </li>
           <li className="mb-4">
+            <label htmlFor="fechaSalida" className="text-purple-800 text-sm mb-1 block">Fecha de salida:</label>
             <input
               type="date"
+              id="fechaSalida"
               className="w-full p-2 border border-purple-800 rounded-md border-2"
               placeholder={tipoDatosCotizacion[3]}
               onChange={(e) => setFechaSalida(e.target.value)}
@@ -74,7 +82,9 @@ const Formulario = () => {
             />
           </li>
           <li className="mb-4">
+            <label htmlFor="cantidadAdultos" className="text-purple-800 text-sm mb-1 block">Ingresa la cantidad de adultos:</label>
             <select
+              id="cantidadAdultos"
               className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setCantidadAdultos(e.target.value)}
               value={cantidadAdultos}
@@ -89,7 +99,9 @@ const Formulario = () => {
             </select>
           </li>
           <li className="mb-4">
+            <label htmlFor="cantidadNinos" className="text-purple-800 text-sm mb-1 block">Ingresa la cantidad de niños:</label>
             <select
+              id="cantidadNinos"
               className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setCantidadNinos(e.target.value)}
               value={cantidadNinos}
@@ -118,4 +130,5 @@ const Formulario = () => {
 };
 
 export { Formulario };
+
 
