@@ -22,10 +22,10 @@ const Formulario = () => {
       <p className="text-purple-800 flex font-bold text-sm justify-center mt-4">REALIZA TU COTIZACION RAPIDAMENTE</p>
 
       <form>
-        <ul className="py-4 space-y-4 md:flex gap-2 md:space-y-0 wrap">
-          <li className="border border-purple-800 border-2 justify-center">
+        <ul className="py-4 space-y-4 md:flex gap-2 md:space-y-0 md:flex-wrap ">
+          <li className="mb-4">
             <select
-              className="w-full p-1"
+              className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setCiudadSeleccionada(e.target.value)}
               value={ciudadSeleccionada}
               required
@@ -38,9 +38,9 @@ const Formulario = () => {
               ))}
             </select>
           </li>
-          <li className="border border-purple-800 border-2 justify-center">
+          <li className="mb-4">
             <select
-              className="w-full p-1"
+              className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setHotelSeleccionado(e.target.value)}
               value={hotelSeleccionado}
               required
@@ -53,29 +53,29 @@ const Formulario = () => {
               ))}
             </select>
           </li>
-          <li className="border border-purple-800 border-2 justify-center">
+          <li className="mb-4">
             <input
               type="date"
-              className="w-full p-1"
+              className="w-full p-2 border border-purple-800 rounded-md border-2"
               placeholder={tipoDatosCotizacion[2]}
               onChange={(e) => setFechaEntrada(e.target.value)}
               value={fechaEntrada}
               required
             />
           </li>
-          <li className="border border-purple-800 border-2 justify-center">
+          <li className="mb-4">
             <input
               type="date"
-              className="w-full p-1"
+              className="w-full p-2 border border-purple-800 rounded-md border-2"
               placeholder={tipoDatosCotizacion[3]}
               onChange={(e) => setFechaSalida(e.target.value)}
               value={fechaSalida}
               required
             />
           </li>
-          <li className="border border-purple-800 border-2 justify-center">
+          <li className="mb-4">
             <select
-              className="w-full p-1"
+              className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setCantidadAdultos(e.target.value)}
               value={cantidadAdultos}
               required
@@ -88,9 +88,9 @@ const Formulario = () => {
               ))}
             </select>
           </li>
-          <li className="border border-purple-800 border-2 justify-center">
+          <li className="mb-4">
             <select
-              className="w-full p-1"
+              className="w-full p-2 border border-purple-800 rounded-md border-2"
               onChange={(e) => setCantidadNinos(e.target.value)}
               value={cantidadNinos}
             >
