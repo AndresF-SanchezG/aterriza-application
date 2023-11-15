@@ -30,5 +30,17 @@
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
-  }
+  },
+  "description": "<<<<<<< HEAD <<<<<<< HEAD # React + Vite",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndresF-SanchezG/aterriza-application.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndresF-SanchezG/aterriza-application/issues"
+  },
+  "homepage": "https://github.com/AndresF-SanchezG/aterriza-application#readme"
 }
