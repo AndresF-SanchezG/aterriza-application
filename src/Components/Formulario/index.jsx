@@ -27,7 +27,7 @@ const Formulario = () => {
             <label htmlFor="ciudad" className="text-purple-800 text-sm mb-1 block">Ciudad:</label>
             <select
               id="ciudad"
-              className="w-full p-2 border border-purple-800 rounded-md border-2"
+              className="w-full p-2 border border-purple-800 rounded-md border-2 h-[2.5rem]"
               onChange={(e) => setCiudadSeleccionada(e.target.value)}
               value={ciudadSeleccionada}
               required
@@ -44,7 +44,7 @@ const Formulario = () => {
             <label htmlFor="hotel" className="text-purple-800 text-sm mb-1 block">Selecciona tu Hotel:</label>
             <select
               id="hotel"
-              className="w-full p-2 border border-purple-800 rounded-md border-2"
+              className="w-full p-2 border border-purple-800 rounded-md border-2 h-[2.5rem]"
               onChange={(e) => setHotelSeleccionado(e.target.value)}
               value={hotelSeleccionado}
               required
@@ -62,7 +62,7 @@ const Formulario = () => {
             <input
               type="date"
               id="fechaEntrada"
-              className="w-full p-2 border border-purple-800 rounded-md border-2"
+              className="w-full p-2 border border-purple-800 rounded-md border-2 h-[2.5rem]"
               placeholder={tipoDatosCotizacion[2]}
               onChange={(e) => setFechaEntrada(e.target.value)}
               value={fechaEntrada}
@@ -74,7 +74,7 @@ const Formulario = () => {
             <input
               type="date"
               id="fechaSalida"
-              className="w-full p-2 border border-purple-800 rounded-md border-2"
+              className="w-full p-2 border border-purple-800 rounded-md border-2 h-[2.5rem]"
               placeholder={tipoDatosCotizacion[3]}
               onChange={(e) => setFechaSalida(e.target.value)}
               value={fechaSalida}
@@ -85,7 +85,7 @@ const Formulario = () => {
             <label htmlFor="cantidadAdultos" className="text-purple-800 text-sm mb-1 block">Ingresa la cantidad de adultos:</label>
             <select
               id="cantidadAdultos"
-              className="w-full p-2 border border-purple-800 rounded-md border-2"
+              className="w-full p-2 border border-purple-800 rounded-md border-2 h-[2.5rem]"
               onChange={(e) => setCantidadAdultos(e.target.value)}
               value={cantidadAdultos}
               required
@@ -102,7 +102,7 @@ const Formulario = () => {
             <label htmlFor="cantidadNinos" className="text-purple-800 text-sm mb-1 block">Ingresa la cantidad de niños:</label>
             <select
               id="cantidadNinos"
-              className="w-full p-2 border border-purple-800 rounded-md border-2"
+              className="w-full p-2 border border-purple-800 rounded-md border-2 h-[2.5rem]"
               onChange={(e) => setCantidadNinos(e.target.value)}
               value={cantidadNinos}
             >
@@ -117,7 +117,7 @@ const Formulario = () => {
         </ul>
         <div className="w-full justify-center items-center flex">
           <button
-            className="mt-4 w-full flex justify-center items-center p-2 bg-purple-800 mb-4 text-white font-bold"
+            className="mt-2 w-full flex justify-center items-center p-2 bg-purple-800 mb-4 text-white font-bold"
             type="button"
             onClick={() => console.log('Cotizar')}
           >
@@ -130,5 +130,7 @@ const Formulario = () => {
 };
 
 export { Formulario };
+
+
 
 
