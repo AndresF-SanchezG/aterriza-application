@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /aterriza-application
+WORKDIR /aterriza-application/frontend
 
 
 COPY package*.json ./
