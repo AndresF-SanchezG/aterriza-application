@@ -21,7 +21,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t gcr.io/aterriza-application/frontend/aterriza:v4 ./api/frontend/src
+          docker build -t gcr.io/aterriza-application/frontend/aterriza:v4 .
         env:
           PROJECT_ID: aterriza-application
           IMAGE_NAME: aterriza
