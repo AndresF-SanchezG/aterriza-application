@@ -1,5 +1,5 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom'
-import { Cotizacion } from '../Cotizacion'
+import { CotizacionProvider } from '../../Context'
 import { DatosContacto } from '../DatosContacto'
 import { Agradecimiento } from '../Agradecimiento'
 import { Experiencias } from '../Experiencias'
@@ -12,6 +12,7 @@ import { QuienesSomos } from '../QuienesSomos'
 import { Home } from '../Home'
 import { Footer} from '../../Components/Footer'
 import { PageAuthentication } from '../PageAuthentication'
+import { Registro } from '../Registro'
 
 
 import './App.css'
@@ -22,7 +23,8 @@ const AppRoutes = () => {
       { path:'/hoteles', element: <Hoteles />},
       { path:'experiencias', element: <Experiencias />},
       { path:'/decameron', element: <Decameron />},
-      { path:'/cotizacion', element: <Cotizacion />},
+      { path:'/registro', element: <Registro />},
+   
       { path:'/datos-de-contacto', element: <DatosContacto />},
       { path:'/*', element: <NotFound />},
       { path:'/agradecimiento', element: <Agradecimiento />},
@@ -35,10 +37,14 @@ const AppRoutes = () => {
 
 const App = () => {
   return (
-     <BrowserRouter>
+    <CotizacionProvider>
+       <BrowserRouter>
         <AppRoutes/>
        
      </BrowserRouter>
+
+    </CotizacionProvider>
+    
   )
 }
 
