@@ -21,3 +21,8 @@ Dockerfile that sets up the application environment, installs dependencies, buil
 Main component that wraps the application with the quotation context provider.
 Configuration of routes using React Router for different pages of the application.
 (https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/pages/App/index.jsx)
+
+## 4. Context
+
+A React context to manage the state related to quotations.
+(https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/Context/index.jsx)
