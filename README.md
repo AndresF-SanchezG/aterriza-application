@@ -26,3 +26,7 @@ Configuration of routes using React Router for different pages of the applicatio
 
 A React context to manage the state related to quotations.
 (https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/Context/index.jsx)
+
+## 5. Home
+Main page displaying a basic layout with a navigation Navbar, a logo, cards, and a footer.
+(https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/pages/Home/index.jsx)
