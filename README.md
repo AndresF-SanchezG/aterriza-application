@@ -19,4 +19,5 @@ Dockerfile that sets up the application environment, installs dependencies, buil
 ## 3. App(React)
 
 Main component that wraps the application with the quotation context provider.
+Configuration of routes using React Router for different pages of the application.
 (https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/pages/App/index.jsx)
