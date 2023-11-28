@@ -15,3 +15,8 @@ A workflow has been created in GitHub Actions that triggers on each push to the 
 
 Dockerfile that sets up the application environment, installs dependencies, builds the application, and serves it on port 3000.
 (https://github.com/AndresF-SanchezG/aterriza-application/blob/main/Dockerfile)
+
+## 3. App(React)
+
+Main component that wraps the application with the quotation context provider.
+(https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/pages/App/index.jsx)
