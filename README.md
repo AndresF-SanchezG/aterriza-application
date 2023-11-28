@@ -35,3 +35,8 @@ Main page displaying a basic layout with a navigation Navbar, a logo, cards, and
 
 A React card component that displays two sections (Hotels and Experiences(Construction Component)) with images and links to specific routes using React Router.
 (https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/Components/Card/index.jsx)
+
+## 7. Form
+
+A component that gathers information to quote hotel services, such as the city, the hotel, dates, and the quantity of adults and children.
+(https://github.com/AndresF-SanchezG/aterriza-application/blob/main/src/Components/Formulario/index.jsx)
