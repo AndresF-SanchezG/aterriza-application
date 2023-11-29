@@ -49,6 +49,8 @@ The backend of this project is done with Python for data extraction and processi
 ![image](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/194699ba-95ec-460c-959d-adef2cecc096)
 ![image](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/4f779f91-3766-46d0-b125-c60dd92b94ca)
 ![image](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/3bb749cd-b87c-4910-8228-3119c9f7298d)
+![image](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/4c7864d3-57fc-42f2-9fbf-3bf94feaa2ad)
+
 
 
 
