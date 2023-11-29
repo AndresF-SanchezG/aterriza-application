@@ -44,3 +44,6 @@ A component that gathers information to quote hotel services, such as the city, 
 # Backend
 
 The backend of this project is done with Python for data extraction and processing logic.
+
+![image](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/6091128b-3c85-41f4-a4e4-d50533604270)
+
