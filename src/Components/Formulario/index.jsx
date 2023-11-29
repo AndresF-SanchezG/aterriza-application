@@ -11,7 +11,7 @@ const Formulario = () => {
   const [fechaEntrada, setFechaEntrada] = useState('');
   const [fechaSalida, setFechaSalida] = useState('');
   const [cantidadAdultos, setCantidadAdultos] = useState('');
-  const [cantidadNinos, setCantidadNinos] = useState('');
+  const [cantidadNinos, setCantidadNinos] = useState(0);
   const [hotelesFiltrados, setHotelesFiltrados] = useState([]);
   const [mostrarFormulario, setMostrarFormulario] = useState(true);
   const [result, setResult] = useState([]);
