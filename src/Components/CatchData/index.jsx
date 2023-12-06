@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import { CotizacionContext } from '../../Context';
 import { useContext, useState } from 'react';
 
@@ -8,15 +9,46 @@ const CatchData = () => {
   const [email, setEmail] = useState('');
   const [contacto, setContacto] = useState('');
   const [mostrarFormulario, setMostrarFormulario] = useState(true);
+  const [mensajeConfirmacion, setMensajeConfirmacion] = useState('');
 
   // Funciones de manejo para actualizar el estado
   const handleNombreChange = (e) => setNombre(e.target.value);
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handleContactoChange = (e) => setContacto(e.target.value);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setMostrarFormulario(false);
+  
+    const formData = {
+      nombre,
+      email,
+      contacto,
+      eleccionUsuario: cotizacionSeleccionada,
+    };
+  
+    try {
+      // Enviar la solicitud POST al backend
+      const response = await fetch('http://35.188.208.251:5000/api/guardar_usuario', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      // Verificar si la solicitud fue exitosa
+      if (response.ok) {
+        setMostrarFormulario(false);
+        setMensajeConfirmacion(jsonResponse.mensaje);
+        // Manejar el éxito, por ejemplo, mostrar un mensaje de éxito o redirigir al usuario
+      } else {
+        console.error('Error al enviar los datos del formulario');
+        // Manejar el error, por ejemplo, mostrar un mensaje de error al usuario
+      }
+    } catch (error) {
+      console.error('Error en la solicitud:', error);
+      // Manejar el error, por ejemplo, mostrar un mensaje de error al usuario
+    }
   };
 
 
@@ -77,7 +109,7 @@ const CatchData = () => {
           </div>
         </div>
       ) : (
-        <div className='mt-4 text-purple-800 text-lg font-semibold p-2 text-center mb-64'>Gracias por contactarnos, pronto nos contactaremos contigo</div>
+        <div className='mt-4 text-purple-800 text-lg font-semibold p-2 text-center mb-64'>Gracias por contactarnos, pronto nos contactaremos contigo  <NavLink to='/' className="text-red-500 font-bold">Ir a Home</NavLink> </div>
       )}
     </div>
   );

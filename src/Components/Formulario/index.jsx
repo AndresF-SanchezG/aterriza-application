@@ -108,7 +108,7 @@ const Formulario = () => {
         cantidad_ninos: cantidadNinos,
       };
 
-      fetch('http://localhost:5000/api/cotizar', {
+      fetch('http://35.188.208.251:5000/api/cotizar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
