@@ -72,6 +72,7 @@ Defines a route to handle file uploads ("/upload/") that deletes the existing fi
 /api/cotizar: Processes provided data to generate quotes based on information in the dataFrameHoteles DataFrame.
 /api/guardar_usuario: Saves user information in the df_usuarios DataFrame.
 ![python-home](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/6d35e04e-5319-4ec7-b896-3e5eeaa6d3e2)
+![python-home2](https://github.com/AndresF-SanchezG/aterriza-application/assets/113924667/502e7b75-58bc-4407-9f6d-61da07229d63)
 
 
 
