@@ -44,6 +44,7 @@ A component that gathers information to quote hotel services, such as the city, 
 # Backend
 
 The backend of this project is done with Python for data extraction and processing logic.
+https://github.com/AndresF-SanchezG/HotelQuotesPython
 
 
 ## 1. Configuration and Middleware:
